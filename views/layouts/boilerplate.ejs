@@ -10,18 +10,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="/css/rating.css">
-    <link href="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/rating.css">
+    <!-- <link href="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.js"></script> -->
 
 </head>
 <body>
     <%- include("../includes/navbar.ejs") %>
-    <div class="container-wrapper">
-        <div class="container">
-            <%- body %>
-        </div>
+    
+    <div class="container">
+        <%- include("../includes/flash.ejs") %>
+        <%- body %>
     </div>
+    
     <%- include("../includes/footer.ejs") %>
     <!-- now in other ejs files keep only the body tag baki badhu Delete -->
 
