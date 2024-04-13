@@ -106,6 +106,9 @@ app.get("/listings/new", (req, res)=>{
 app.get("/listings/:id", async (req, res)=>{
     let {id} = req.params;
     const listing = await Listing.findById(id).populate("reviews")
+    if(!listing){
+        req.flash("error", "New Food Item Added!")
+    }
     res.render("listings/show.ejs", {listing});
 })
 
